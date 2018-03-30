@@ -12,7 +12,7 @@ import pl.execon.tmo.main.java.issuetracker.IssueTrackerManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomDpdReporter implements ITestListener, IResultListener2, IReporter {
+public class CustomReporter implements ITestListener, IResultListener2, IReporter {
 
 
   private IssueTrackerClientInterface clientInterface;
@@ -21,8 +21,8 @@ public class CustomDpdReporter implements ITestListener, IResultListener2, IRepo
   private static List<ITestResult> testResults = new ArrayList<>();
 
 
-  public CustomDpdReporter(RunProfile profile, long startProgramTime,
-                           CustomReportGenerator reportGenerator) {
+  public CustomReporter(RunProfile profile, long startProgramTime,
+                        CustomReportGenerator reportGenerator) {
 
     IssueTrackerConfiguration issueTrackerConfiguration =
         ConfigurationManager.getInstance().getConfiguration().getIssueTrackerConfiguration();

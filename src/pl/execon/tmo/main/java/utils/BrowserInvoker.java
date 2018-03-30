@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pl.execon.tmo.main.java.data.SupportedBrowsers;
 import pl.execon.tmo.main.java.data.Configuration;
@@ -85,6 +86,14 @@ public class BrowserInvoker {
                 caps.setCapability(ChromeOptions.CAPABILITY, options);
                 webDriver = new ChromeDriver(caps);
                 webDriver.manage().window().maximize();
+                break;
+            case IE:
+                System.setProperty("webdriver.ie.driver.loglevel", "DEBUG");
+                DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+                capabilities.setCapability("requireWindowFocus", true);
+                webDriver = new InternetExplorerDriver(capabilities);
+                webDriver.manage().timeouts().setScriptTimeout(THIRDTEEN, TimeUnit.SECONDS);
+                webDriver.manage().deleteAllCookies();
                 break;
             case CHROME_MOBILE:
                 if (ConfigurationManager.getInstance()

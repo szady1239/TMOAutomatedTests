@@ -33,8 +33,6 @@ public class EmailReporter {
     public static final String SMTP_TIMEOUT_VALUE = "60000";
     public static final String SMTP_TLS = "mail.smtp.starttls.enable";
     public static final String SMTP_TLS_VALUE = "true";
-    public static final String SMTP_TRUSTED_HOSTS = "mail.smtp.ssl.trust";
-    public static final String SMTP_TRUSTED_HOSTS_VALUE = "outlook.dpd.com.pl";
     public static final String SMTP_MAIL_FROM = "mail.from";
 
     private static final String NON_EMAILABLE_FILE_EXT = "xml";
@@ -70,7 +68,6 @@ public class EmailReporter {
         if (useSsl) {
             properties.put(SMTP_SSL, SMTP_SSL_SOCKET);
         }
-        properties.put(SMTP_TRUSTED_HOSTS, SMTP_TRUSTED_HOSTS_VALUE);
         properties.put(SMTP_AUTH, useAuthentication);
         properties.put(SMTP_MAIL_FROM, mailInfoData.getFrom());
         Session session;

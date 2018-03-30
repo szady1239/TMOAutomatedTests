@@ -20,7 +20,7 @@ public class WebTesterEngine {
 
     private ConfigurationReaderInterface configurationReader;
     private SourceDataReaderInterface sourceDataReader;
-    private CustomDpdReporter reporter;
+    private CustomReporter reporter;
     private CustomReportGenerator reportGenerator;
     private RunProfile profile;
 
@@ -59,7 +59,7 @@ public class WebTesterEngine {
 
         TestDataManager.getInstance().setSourceDataReader(sourceDataReader);
 
-        reporter = new CustomDpdReporter(profile, date.getTime(), reportGenerator);
+        reporter = new CustomReporter(profile, date.getTime(), reportGenerator);
 
         List<XmlSuite> xmlSuiteList = configurationManager.getAllXmlSuites(allTestClassMap);
 

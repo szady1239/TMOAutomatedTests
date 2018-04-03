@@ -21,7 +21,7 @@ public class WithDeviceForNumberTransfersGrid implements PageInterface {
     private WebElement firstSectionInternetTooltip;
     private WebElement firstSectionLeftInternetAdjustmentButton;
     private WebElement firstSectionRightInternetAdjustmentButton;
-    private WebElement firstSectionConstatnPrice;
+    private WebElement firstSectionConstantPrice;
     private WebElement firstSectionDynamicPrice;
     private WebElement firstSectionPickPhoneButton;
     private WebElement firstSectionSubscriptionLengthInformation;
@@ -191,12 +191,12 @@ public class WithDeviceForNumberTransfersGrid implements PageInterface {
         this.firstSectionRightInternetAdjustmentButton = firstSectionRightInternetAdjustmentButton;
     }
 
-    public WebElement getFirstSectionConstatnPrice() {
-        return firstSectionConstatnPrice;
+    public WebElement getFirstSectionConstantPrice() {
+        return firstSectionConstantPrice;
     }
 
-    public void setFirstSectionConstatnPrice(WebElement firstSectionConstatnPrice) {
-        this.firstSectionConstatnPrice = firstSectionConstatnPrice;
+    public void setFirstSectionConstantPrice(WebElement firstSectionConstantPrice) {
+        this.firstSectionConstantPrice = firstSectionConstantPrice;
     }
 
     public WebElement getFirstSectionDynamicPrice() {

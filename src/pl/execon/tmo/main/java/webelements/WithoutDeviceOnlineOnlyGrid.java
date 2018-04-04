@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import pl.execon.tmo.main.java.builders.PageInterface;
 
 public class WithoutDeviceOnlineOnlyGrid implements PageInterface {
-    private WebElement contractTab;
     //@TODO Add all AppsNoLimit icons
 
     //First section
@@ -50,14 +49,6 @@ public class WithoutDeviceOnlineOnlyGrid implements PageInterface {
     private WebElement secondSectionAppsNoLimitTooltip;
     private WebElement secondSectionAppsNoLimitLeftChevron;
     private WebElement secondSectionAppsNoLimitRightChevron;
-
-    public WebElement getContractTab() {
-        return contractTab;
-    }
-
-    public void setContractTab(WebElement contractTab) {
-        this.contractTab = contractTab;
-    }
 
     public WebElement getFirstSectionOfferHeaderPT1() {
         return firstSectionOfferHeaderPT1;

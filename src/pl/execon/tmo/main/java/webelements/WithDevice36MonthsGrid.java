@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import pl.execon.tmo.main.java.builders.PageInterface;
 
 public class WithDevice36MonthsGrid implements PageInterface {
-    private WebElement contractTab;
     private WebElement firstSectionOfferHeaderPT1;
     private WebElement firstSectionBillPaidPT1;
     private WebElement firstSectionBillPaidPT2;
@@ -26,14 +25,6 @@ public class WithDevice36MonthsGrid implements PageInterface {
     private WebElement firstSectionBonusInformation;
     private WebElement firstSectionFreeShipmentInformation;
     private WebElement firstSectionDiscountForOnlineOrderInformation;
-
-    public WebElement getContractTab() {
-        return contractTab;
-    }
-
-    public void setContractTab(WebElement contractTab) {
-        this.contractTab = contractTab;
-    }
 
     public WebElement getFirstSectionOfferHeaderPT1() {
         return firstSectionOfferHeaderPT1;

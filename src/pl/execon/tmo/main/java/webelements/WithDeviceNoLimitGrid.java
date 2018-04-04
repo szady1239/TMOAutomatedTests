@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import pl.execon.tmo.main.java.builders.PageInterface;
 
 public class WithDeviceNoLimitGrid implements PageInterface {
-    private WebElement contractTab;
     //First section
     private WebElement firstSectionOfferHeaderPT1;
     private WebElement firstSectionOfferHeaderPT2;
@@ -74,14 +73,6 @@ public class WithDeviceNoLimitGrid implements PageInterface {
     private WebElement thirdSectionBonusInformation;
     private WebElement thirdSectionFreeShipmentInformation;
     private WebElement thirdSectionDiscountForOnlineOrderInformation;
-
-    public WebElement getContractTab() {
-        return contractTab;
-    }
-
-    public void setContractTab(WebElement contractTab) {
-        this.contractTab = contractTab;
-    }
 
     public WebElement getFirstSectionOfferHeaderPT1() {
         return firstSectionOfferHeaderPT1;

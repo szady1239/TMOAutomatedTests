@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import pl.execon.tmo.main.java.builders.PageInterface;
 
 public class WithDeviceStandardGrid implements PageInterface {
-    private WebElement contractTab;
     //@TODO Add all AppsNoLimit icons
     //@TODO Add video information after expand the header
 
@@ -84,14 +83,6 @@ public class WithDeviceStandardGrid implements PageInterface {
     private WebElement thirdSectionAppsNoLimitLeftChevron;
     private WebElement thirdSectionAppsNoLimitRightChevron;
 
-
-    public WebElement getContractTab() {
-        return contractTab;
-    }
-
-    public void setContractTab(WebElement contractTab) {
-        this.contractTab = contractTab;
-    }
 
     public WebElement getFirstSectionOfferHeaderPT1() {
         return firstSectionOfferHeaderPT1;

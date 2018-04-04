@@ -35,7 +35,7 @@ public class WithoutDeviceNoLimitGrid implements PageInterface {
     private WebElement secondSectionInternetTooltip;
     private WebElement secondSectionConstantPrice;
     private WebElement secondSectionDynamicPrice;
-    private WebElement secondSectionPickPhoneButton;
+    private WebElement secondSectionToCartButton;
     private WebElement secondSectionSubscriptionLengthInformation;
     private WebElement secondSectionBonusInformation;
     private WebElement secondSectionFreeShipmentInformation;
@@ -53,7 +53,7 @@ public class WithoutDeviceNoLimitGrid implements PageInterface {
     private WebElement thirdSectionInternetPT2;
     private WebElement thirdSectionInternetTooltip;
     private WebElement thirdSectionPrice;
-    private WebElement thirdSectionPickPhoneButton;
+    private WebElement thirdSectionToCartButton;
     private WebElement thirdSectionSubscriptionLengthInformation;
     private WebElement thirdSectionBonusInformation;
     private WebElement thirdSectionFreeShipmentInformation;
@@ -284,12 +284,12 @@ public class WithoutDeviceNoLimitGrid implements PageInterface {
         this.secondSectionDynamicPrice = secondSectionDynamicPrice;
     }
 
-    public WebElement getSecondSectionPickPhoneButton() {
-        return secondSectionPickPhoneButton;
+    public WebElement getSecondSectionToCartButton() {
+        return secondSectionToCartButton;
     }
 
-    public void setSecondSectionPickPhoneButton(WebElement secondSectionPickPhoneButton) {
-        this.secondSectionPickPhoneButton = secondSectionPickPhoneButton;
+    public void setSecondSectionToCartButton(WebElement secondSectionToCartButton) {
+        this.secondSectionToCartButton = secondSectionToCartButton;
     }
 
     public WebElement getSecondSectionSubscriptionLengthInformation() {
@@ -412,12 +412,12 @@ public class WithoutDeviceNoLimitGrid implements PageInterface {
         this.thirdSectionPrice = thirdSectionPrice;
     }
 
-    public WebElement getThirdSectionPickPhoneButton() {
-        return thirdSectionPickPhoneButton;
+    public WebElement getThirdSectionToCartButton() {
+        return thirdSectionToCartButton;
     }
 
-    public void setThirdSectionPickPhoneButton(WebElement thirdSectionPickPhoneButton) {
-        this.thirdSectionPickPhoneButton = thirdSectionPickPhoneButton;
+    public void setThirdSectionToCartButton(WebElement thirdSectionToCartButton) {
+        this.thirdSectionToCartButton = thirdSectionToCartButton;
     }
 
     public WebElement getThirdSectionSubscriptionLengthInformation() {

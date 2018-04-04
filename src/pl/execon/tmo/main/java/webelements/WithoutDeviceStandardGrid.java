@@ -20,7 +20,7 @@ public class WithoutDeviceStandardGrid implements PageInterface {
     private WebElement firstSectionLeftInternetAdjustmentButton;
     private WebElement firstSectionRightInternetAdjustmentButton;
     private WebElement firstSectionPrice;
-    private WebElement firstSectionPickPhoneButton;
+    private WebElement firstSectionToCartButton;
     private WebElement firstSectionSubscriptionLengthInformation;
     private WebElement firstSectionBonusInformation;
     private WebElement firstSectionFreeShipmentInformation;
@@ -44,7 +44,7 @@ public class WithoutDeviceStandardGrid implements PageInterface {
     private WebElement secondSectionLeftInternetAdjustmentButton;
     private WebElement secondSectionRightInternetAdjustmentButton;
     private WebElement secondSectionPrice;
-    private WebElement secondSectionPickPhoneButton;
+    private WebElement secondSectionToCartButton;
     private WebElement secondSectionSubscriptionLengthInformation;
     private WebElement secondSectionBonusInformation;
     private WebElement secondSectionFreeShipmentInformation;
@@ -158,12 +158,12 @@ public class WithoutDeviceStandardGrid implements PageInterface {
         this.firstSectionPrice = firstSectionPrice;
     }
 
-    public WebElement getFirstSectionPickPhoneButton() {
-        return firstSectionPickPhoneButton;
+    public WebElement getFirstSectionToCartButton() {
+        return firstSectionToCartButton;
     }
 
-    public void setFirstSectionPickPhoneButton(WebElement firstSectionPickPhoneButton) {
-        this.firstSectionPickPhoneButton = firstSectionPickPhoneButton;
+    public void setFirstSectionToCartButton(WebElement firstSectionToCartButton) {
+        this.firstSectionToCartButton = firstSectionToCartButton;
     }
 
     public WebElement getFirstSectionSubscriptionLengthInformation() {
@@ -334,12 +334,12 @@ public class WithoutDeviceStandardGrid implements PageInterface {
         this.secondSectionPrice = secondSectionPrice;
     }
 
-    public WebElement getSecondSectionPickPhoneButton() {
-        return secondSectionPickPhoneButton;
+    public WebElement getSecondSectionToCartButton() {
+        return secondSectionToCartButton;
     }
 
-    public void setSecondSectionPickPhoneButton(WebElement secondSectionPickPhoneButton) {
-        this.secondSectionPickPhoneButton = secondSectionPickPhoneButton;
+    public void setSecondSectionToCartButton(WebElement secondSectionToCartButton) {
+        this.secondSectionToCartButton = secondSectionToCartButton;
     }
 
     public WebElement getSecondSectionSubscriptionLengthInformation() {

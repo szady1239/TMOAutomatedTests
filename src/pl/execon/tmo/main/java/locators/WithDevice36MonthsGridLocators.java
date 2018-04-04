@@ -2,7 +2,6 @@ package pl.execon.tmo.main.java.locators;
 
 public class WithDevice36MonthsGridLocators {
     public static final String FIRST_SECTION_OFFER_HEADER_PT1_CLASS = "#plans-list > app-root > offer-boxes > ngx-slick > div > div > offer-box:nth-child(1) > div > app-offer-name > div > span:nth-child(1)";
-    public static final String FIRST_SECTION_OFFER_HEADER_PT2_CLASS = "#plans-list > app-root > offer-boxes > ngx-slick > div > div > offer-box:nth-child(1) > div > app-offer-name > div > span.offer-name__name.offer-name__name--sub";
     public static final String FIRST_SECTION_BILL_PAID_PT1_CLASS = "#plans-list > app-root > offer-boxes > ngx-slick > div > div > offer-box:nth-child(1) > div > app-bill-paid > div > div > span";
     public static final String FIRST_SECTION_BILL_PAID_PT2_CLASS = "#plans-list > app-root > offer-boxes > ngx-slick > div > div > offer-box:nth-child(1) > div > app-bill-paid > div > span";
     public static final String FIRST_SECTION_BILL_PAID_TOOLTIP_CLASS = "#plans-list > app-root > offer-boxes > ngx-slick > div > div > offer-box:nth-child(1) > div > app-bill-paid > div > div > img";

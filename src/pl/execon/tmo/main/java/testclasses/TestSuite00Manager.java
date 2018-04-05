@@ -1,11 +1,6 @@
 package pl.execon.tmo.main.java.testclasses;
 
 import org.testng.annotations.Test;
-import pl.execon.tmo.main.java.builders.HeaderBuilder;
-import pl.execon.tmo.main.java.utils.PageBuilderHelper;
-import pl.execon.tmo.main.java.webelements.Header;
-
-import java.io.IOException;
 
 
 public class TestSuite00Manager extends TestManager {
@@ -19,14 +14,24 @@ public class TestSuite00Manager extends TestManager {
 
 
     @Test
-    public void test1(){
+    public void test1() {
         CheckAllGridsStartedFromOffers.checkAllGrids(this);
     }
 
     @Test
-    public void test2(){
-        FullVoiceOrderProcess.checkFullVoiceOrderProcessWithoutPhone(this);
+    public void test2() {
+        FullVoiceOrderProcessFromOffersGrid.checkFullVoiceOrderProcessWithoutPhone(this);
     }
+
+//    @Test
+//    public void test3() {
+//        FullVoiceOrderProcessFromOffersGrid.checkFullVoiceOrderProcessWithPhone(this);
+//    }
+//
+//    @Test
+//    public void test4() {
+//        FullVoiceOrderProcessFromDevices.checkFullVoiceOrderProcessWithPhone(this);
+//    }
 
 
 }

@@ -5,10 +5,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.TestRunner;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import org.testng.reporters.TestHTMLReporter;
 import pl.execon.tmo.main.java.builders.PageDirector;
 import pl.execon.tmo.main.java.data.Configuration;
@@ -63,7 +60,7 @@ public abstract class TestManager {
      * @param ctx
      * @throws InterruptedException
      */
-    @BeforeSuite
+    @BeforeMethod
     @Parameters({"browser"})
     protected void beforeSuite(ITestContext ctx, String browser) throws InterruptedException {
         try {
@@ -127,7 +124,9 @@ public abstract class TestManager {
         } finally {
             ScreenshotListener.getListener().resetCounter();
         }
+        driver.quit();
     }
+
 
     protected boolean shouldRunTestCase(String testCaseName) throws IOException {
         if (tcToRun == null) {

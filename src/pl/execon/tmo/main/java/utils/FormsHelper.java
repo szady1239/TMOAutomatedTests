@@ -22,7 +22,6 @@ public class FormsHelper {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Log.info(prop.getProperty("imie"));
         WebUtils.getElementByCSS(testManager.getWebDriver(), "#field-1").sendKeys(prop.getProperty("imie"));
         WebUtils.getElementByCSS(testManager.getWebDriver(), "#field-2").sendKeys(prop.getProperty("nazwisko"));
         WebUtils.getElementByCSS(testManager.getWebDriver(), "#field-3").sendKeys(prop.getProperty("pesel"));

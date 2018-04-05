@@ -23,15 +23,15 @@ public class TestSuite00Manager extends TestManager {
         FullVoiceOrderProcessFromOffersGrid.checkFullVoiceOrderProcessWithoutPhone(this);
     }
 
-//    @Test
-//    public void test3() {
-//        FullVoiceOrderProcessFromOffersGrid.checkFullVoiceOrderProcessWithPhone(this);
-//    }
-//
-//    @Test
-//    public void test4() {
-//        FullVoiceOrderProcessFromDevices.checkFullVoiceOrderProcessWithPhone(this);
-//    }
+    @Test
+    public void test3() {
+        FullVoiceOrderProcessFromOffersGrid.checkFullVoiceOrderProcessWithPhone(this);
+    }
+
+    @Test
+    public void test4() {
+        FullVoiceOrderProcessFromDevices.checkFullVoiceOrderProcessWithPhone(this);
+    }
 
 
 }

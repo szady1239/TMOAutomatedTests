@@ -25,7 +25,7 @@ public class MainClass {
     private static final String FIREFOXDRIVER_PATH_PARAM = "firefoxdriverpath";
 
     private static final RunProfile DEFAULT_RUN_PROFILE = RunProfile.PRODUCTION;
-    private static final String DEFAULT_PRIMARY_SOURCE = "Execon_-_DPD_Track_And_Trace_main.xlsx";
+    private static final String DEFAULT_PRIMARY_SOURCE = "Execon_-_TMO_SML_main.xlsx";
     private static final String CONFIGURATION_SHEET_NAME = "konfiguracja główna";
 
     private MainClass() { }
@@ -82,7 +82,7 @@ public class MainClass {
         }
 
         Map<String, Class<? extends TestManager>> classMap = new HashMap<>();
-        classMap.put("TS00", TestSuite00Manager.class);
+        classMap.put("TS01", TestSuite00Manager.class);
 
         engine = new WebTesterEngine(profile,
                 new XlsConfigurationReader(configFile, CONFIGURATION_SHEET_NAME), new XlsSourceDataReader(),

@@ -91,18 +91,4 @@ public class TestDataManager {
         return dataMaps.size();
     }
 
-
-    public List<OrderInfo> getSetOfTcData(String tsName, String tcName, Integer set) {
-        List<OrderInfo> result = null;
-        if (testSuiteDataList != null) {
-            for (TestSuiteData entry : testSuiteDataList) {
-                if (entry.getTsName().equals(tsName)) {
-                    result = entry.getData(tcName, set);
-                }
-            }
-        } else {
-            Log.info("Test suite data list is empty");
-        }
-        return result;
-    }
 }

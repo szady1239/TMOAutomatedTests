@@ -161,29 +161,6 @@ public class ConfigurationManager {
       throw new IOException("No test suites to run");
     }
 
-    // Checking database configuration
-    DatabaseInfoData databaseInfoData = configuration.getDatabaseInfoData();
-
-    String host = databaseInfoData.getHost();
-    boolean isUsePort = databaseInfoData.isUsePort();
-    Integer port = databaseInfoData.getPort();
-    String user = databaseInfoData.getLogin();
-    String password = databaseInfoData.getPassword();
-    String dbName = databaseInfoData.getDbName();
-
-    if(host == null || host.isEmpty()) {
-        throw new IOException("Database host cannot be null");
-    } else if (isUsePort) {
-      if(port <= 0) {
-          throw new IOException("Host port is not correctly set");
-      }
-    } else if(user == null || user.isEmpty()) {
-        throw new IOException("Username cannot be empty");
-    } else if(password == null || password.isEmpty()) {
-        throw new IOException("Password cannot be empty");
-    } else if(dbName == null || dbName.isEmpty()) {
-        throw new IOException("Db name cannot be empty");
-    }
 
     if (profile == RunProfile.PRODUCTION) {
       // Checking Issue tracker configuration

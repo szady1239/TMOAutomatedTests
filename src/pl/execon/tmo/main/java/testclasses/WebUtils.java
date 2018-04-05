@@ -118,9 +118,16 @@ public class WebUtils {
      * @throws NoSuchElementException when element doesn't exists
      */
 
-    public static WebElement getElementByClass(WebDriver driver, String className) {
+
+    public static WebElement getElementByClass(WebDriver driver, String className){
         return driver.findElement(By.className(className));
     }
+
+    public static WebElement getElementByCSS(WebDriver driver, String className) {
+        return driver.findElement(By.cssSelector(className));
+    }
+
+
 
 
 }

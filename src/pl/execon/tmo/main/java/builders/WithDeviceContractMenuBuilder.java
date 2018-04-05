@@ -10,10 +10,10 @@ public class WithDeviceContractMenuBuilder implements PageBuilderInterface{
     @Override
     public void buildPage(WebDriver driver) {
         contractMenu = new WithDeviceContractMenu();
-        contractMenu.setForNumberTransfer(WebUtils.getElementByClass(driver, WithDeviceContractMenuLocators.FOR_NUMBER_TRANSFER_CLASS));
-        contractMenu.setStandard(WebUtils.getElementByClass(driver, WithDeviceContractMenuLocators.STANDARD_CLASS));
-        contractMenu.setThreeYearSubscription(WebUtils.getElementByClass(driver, WithDeviceContractMenuLocators.THREE_YEAR_SUBSCRIPTION_CLASS));
-        contractMenu.settMobileNoLimit(WebUtils.getElementByClass(driver, WithDeviceContractMenuLocators.TMOBILE_NO_LIMIT_CLASS));
+        contractMenu.setForNumberTransfer(WebUtils.getElementByCSS(driver, WithDeviceContractMenuLocators.FOR_NUMBER_TRANSFER_CSS));
+        contractMenu.setStandard(WebUtils.getElementByCSS(driver, WithDeviceContractMenuLocators.STANDARD_CSS));
+        contractMenu.setThreeYearSubscription(WebUtils.getElementByCSS(driver, WithDeviceContractMenuLocators.THREE_YEAR_SUBSCRIPTION_CSS));
+        contractMenu.settMobileNoLimit(WebUtils.getElementByCSS(driver, WithDeviceContractMenuLocators.TMOBILE_NO_LIMIT_CSS));
     }
 
     @Override

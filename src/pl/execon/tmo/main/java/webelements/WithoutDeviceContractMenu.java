@@ -8,7 +8,7 @@ public class WithoutDeviceContractMenu implements PageInterface {
     private WebElement standard;
     private WebElement onlineOnly;
 
-    public WebElement gettMobileNoLimit() {
+    public WebElement getTMobileNoLimit() {
         return tMobileNoLimit;
     }
 

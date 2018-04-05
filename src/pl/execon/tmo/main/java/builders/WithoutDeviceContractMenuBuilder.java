@@ -11,9 +11,9 @@ public class WithoutDeviceContractMenuBuilder implements PageBuilderInterface {
     @Override
     public void buildPage(WebDriver driver) {
         contractMenu = new WithoutDeviceContractMenu();
-        contractMenu.setOnlineOnly(WebUtils.getElementByClass(driver, WithoutDeviceContractMenuLocators.ONLINE_ONLY_CLASS));
-        contractMenu.setStandard(WebUtils.getElementByClass(driver, WithoutDeviceContractMenuLocators.STANDARD_CLASS));
-        contractMenu.settMobileNoLimit(WebUtils.getElementByClass(driver, WithoutDeviceContractMenuLocators.TMOBILE_NO_LIMIT_CLASS));
+        contractMenu.setOnlineOnly(WebUtils.getElementByCSS(driver, WithoutDeviceContractMenuLocators.ONLINE_ONLY_CSS));
+        contractMenu.setStandard(WebUtils.getElementByCSS(driver, WithoutDeviceContractMenuLocators.STANDARD_CSS));
+        contractMenu.settMobileNoLimit(WebUtils.getElementByCSS(driver, WithoutDeviceContractMenuLocators.TMOBILE_NO_LIMIT_CSS));
     }
 
     @Override

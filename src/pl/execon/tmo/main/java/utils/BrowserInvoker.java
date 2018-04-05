@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pl.execon.tmo.main.java.data.SupportedBrowsers;
 import pl.execon.tmo.main.java.data.Configuration;
@@ -84,14 +85,16 @@ public class BrowserInvoker {
                 ChromeOptions options = new ChromeOptions();
                 options.setExperimentalOption("prefs", prefs);
                 caps.setCapability(ChromeOptions.CAPABILITY, options);
-                webDriver = new ChromeDriver(caps);
+                //webDriver = new ChromeDriver(caps);
+                webDriver = new ChromeDriver(options);
                 webDriver.manage().window().maximize();
                 break;
             case IE:
                 System.setProperty("webdriver.ie.driver.loglevel", "DEBUG");
                 DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
                 capabilities.setCapability("requireWindowFocus", true);
-                webDriver = new InternetExplorerDriver(capabilities);
+                //webDriver = new InternetExplorerDriver(capabilities);
+                webDriver = new InternetExplorerDriver(new InternetExplorerOptions().requireWindowFocus());
                 webDriver.manage().timeouts().setScriptTimeout(THIRDTEEN, TimeUnit.SECONDS);
                 webDriver.manage().deleteAllCookies();
                 break;
@@ -114,7 +117,8 @@ public class BrowserInvoker {
                 ChromeOptions options_mobile = new ChromeOptions();
                 options_mobile.setExperimentalOption("prefs", prefs_mobile);
                 caps_mobile.setCapability(ChromeOptions.CAPABILITY, options_mobile);
-                webDriver = new ChromeDriver(caps_mobile);
+                //webDriver = new ChromeDriver(caps_mobile);
+                webDriver = new ChromeDriver(options_mobile);
                 webDriver.manage().window().setSize(new Dimension(defaultMobileChromeWidth, defaultMobileChromeHeight));
                 break;
             default:

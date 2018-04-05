@@ -10,12 +10,12 @@ public class HeaderBuilder implements PageBuilderInterface {
     @Override
     public void buildPage(WebDriver driver) {
         header = new Header();
-        header.setDevicesMenu(WebUtils.getElementByClass(driver, HeaderLocators.DEVICES_MENU_CLASS));
-        header.setOffersMenu(WebUtils.getElementByClass(driver, HeaderLocators.OFFERS_MENU_CLASS));
-        header.setPhonesSubMenu(WebUtils.getElementByClass(driver, HeaderLocators.PHONES_SUBMENU_CLASS));
-        header.setRouterSubMenu(WebUtils.getElementByClass(driver, HeaderLocators.ROUTERS_SUBMENU_CLASS));
-        header.setTabletsSubMenu(WebUtils.getElementByClass(driver, HeaderLocators.TABLETS_SUBMENU_CLASS));
-        header.setSubscriptionSubMenu(WebUtils.getElementByClass(driver, HeaderLocators.SUBSCRIPTION_SUBMENU_CLASS));
+        header.setDevicesMenu(WebUtils.getElementByCSS(driver, HeaderLocators.DEVICES_MENU_CSS));
+        header.setOffersMenu(WebUtils.getElementByCSS(driver, HeaderLocators.OFFERS_MENU_CSS));
+        header.setPhonesSubMenu(WebUtils.getElementByCSS(driver, HeaderLocators.PHONES_SUBMENU_CSS));
+        header.setRouterSubMenu(WebUtils.getElementByCSS(driver, HeaderLocators.ROUTERS_SUBMENU_CSS));
+        header.setTabletsSubMenu(WebUtils.getElementByCSS(driver, HeaderLocators.TABLETS_SUBMENU_CSS));
+        header.setSubscriptionSubMenu(WebUtils.getElementByCSS(driver, HeaderLocators.SUBSCRIPTION_SUBMENU_CSS));
     }
 
     @Override

@@ -112,9 +112,8 @@ public class JiraReporter extends AbstractIssueReporter implements IssueTrackerC
                 String testCaseName = getTestCaseName(testResult);
                 String summary = prepareSummary(testCaseName, testResult.getTestContext().getSuite().getName(), testResult.getThrowable().getMessage());
 
-                String description = getDescription(testResult);
+
                 IssueInputBuilder issueInputBuilder = new IssueInputBuilder(trackerConfiguration.getProjectName(), ISSUE_TYPE_ID, summary);
-                issueInputBuilder = issueInputBuilder.setDescription(description);
                 if(!trackerConfiguration.getComponentNames().isEmpty()) {
                     issueInputBuilder = issueInputBuilder.setComponentsNames(trackerConfiguration.getComponentNames());
                 }
@@ -131,16 +130,5 @@ public class JiraReporter extends AbstractIssueReporter implements IssueTrackerC
         }
     }
 
-    private String getDescription(ITestResult testResult) {
-        Object[] parameters = testResult.getParameters();
-        ArrayList<OrderInfo> casted;
-        String description = "";
-        if(parameters.length != 0 && parameters[0] instanceof ArrayList) {
-            casted = (ArrayList<OrderInfo>)parameters[0];
-            description = casted.get(0).toJiraDescription();
-            description += "\n\n";
-        }
-        description += prepareTestStackTrace(testResult.getThrowable());
-        return description;
-    }
+
 }

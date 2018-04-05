@@ -9,7 +9,7 @@ public class WithDeviceContractMenu implements PageInterface {
     private WebElement forNumberTransfer;
     private WebElement threeYearSubscription;
 
-    public WebElement gettMobileNoLimit() {
+    public WebElement getTMobileNoLimit() {
         return tMobileNoLimit;
     }
 

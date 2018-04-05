@@ -11,12 +11,12 @@ public class MainOffersGridBuilder implements PageBuilderInterface {
     @Override
     public void buildPage(WebDriver driver) {
         page = new MainOffersGrid();
-        page.setHeader(WebUtils.getElementByClass(driver, MainOffersGridLocators.HEADER_CLASS));
-        page.setWithDevice(WebUtils.getElementByClass(driver, MainOffersGridLocators.WITH_DEVICE_CLASS));
-        page.setWithoutDevice(WebUtils.getElementByClass(driver, MainOffersGridLocators.WITHOUT_DEVICE_CLASS));
-        page.setInNextStepChooseInfo(WebUtils.getElementByClass(driver, MainOffersGridLocators.IN_NEXT_STEP_CHOOSE_INFO_CLASS));
-        page.setCommercialInformationText(WebUtils.getElementByClass(driver, MainOffersGridLocators.COMMERCIAL_INFORMATION_TEXT_CLASS));
-        page.setDocumentsForDownloadDropdown(WebUtils.getElementByClass(driver, MainOffersGridLocators.DOCUMENTS_FOR_DOWNLOAD_DROPDOWN_CLASS));
+        page.setHeader(WebUtils.getElementByCSS(driver, MainOffersGridLocators.HEADER_CSS));
+        page.setWithDevice(WebUtils.getElementByCSS(driver, MainOffersGridLocators.WITH_DEVICE_CSS));
+        page.setWithoutDevice(WebUtils.getElementByCSS(driver, MainOffersGridLocators.WITHOUT_DEVICE_CSS));
+        page.setInNextStepChooseInfo(WebUtils.getElementByCSS(driver, MainOffersGridLocators.IN_NEXT_STEP_CHOOSE_INFO_CSS));
+        page.setCommercialInformationText(WebUtils.getElementByCSS(driver, MainOffersGridLocators.COMMERCIAL_INFORMATION_TEXT_CSS));
+        page.setDocumentsForDownloadDropdown(WebUtils.getElementByCSS(driver, MainOffersGridLocators.DOCUMENTS_FOR_DOWNLOAD_DROPDOWN_CSS));
     }
 
     @Override

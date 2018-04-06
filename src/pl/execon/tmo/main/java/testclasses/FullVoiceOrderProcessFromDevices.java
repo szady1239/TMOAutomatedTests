@@ -3,10 +3,8 @@ package pl.execon.tmo.main.java.testclasses;
 import org.openqa.selenium.By;
 import pl.execon.tmo.main.java.builders.HeaderBuilder;
 import pl.execon.tmo.main.java.builders.WithDeviceNoLimitGridBuilder;
-import pl.execon.tmo.main.java.utils.CloseUnnecesaryDivs;
-import pl.execon.tmo.main.java.utils.FormsHelper;
-import pl.execon.tmo.main.java.utils.PageBuilderHelper;
-import pl.execon.tmo.main.java.utils.PickPhoneHelper;
+import pl.execon.tmo.main.java.data.OfferData;
+import pl.execon.tmo.main.java.utils.*;
 import pl.execon.tmo.main.java.webelements.Header;
 import pl.execon.tmo.main.java.webelements.WithDeviceNoLimitGrid;
 
@@ -27,13 +25,17 @@ public class FullVoiceOrderProcessFromDevices {
         PickPhoneHelper.getRandomDisplayedGetOfferButton(testManager.driver, PickPhoneHelper.getAllGetOfferButtons(testManager.driver, PickPhoneHelper.ALL_PHONES_FOR_CHOOSE_SUBSCRIPTION_CSS)).click();
         WithDeviceNoLimitGrid withDeviceNoLimitGrid = PageBuilderHelper.generatePage(testManager, new WithDeviceNoLimitGridBuilder(), true, false);
         CloseUnnecesaryDivs.closeChatDiv(testManager);
+        OfferData offerData = new OfferData(withDeviceNoLimitGrid.getFirstSectionPrice().getText());
+
         withDeviceNoLimitGrid.getFirstSectionPickPhoneButton().click();
 
+        AssertionHelper.checkOfferPriceAssertionOnCartPage(testManager, offerData);
         testManager.driver.findElement(By.cssSelector(CART_NEXT_BUTTON_CSS)).click();
         FormsHelper.insertDataToForm(testManager);
         testManager.driver.findElement(By.cssSelector(FORM_ALL_AGREEMENT_CONFIRM_CSS)).click();
         testManager.driver.findElement(By.cssSelector(CONFIRM_FORM_BUTTON_CSS)).click();
         testManager.driver.findElement(By.cssSelector(CONFIRM_FIRST_STEP_CSS)).click();
         assertThat(testManager.driver.getTitle().equalsIgnoreCase("Podsumowanie"));
+        AssertionHelper.checkOfferPriceAssertionOnSummaryPageWithPhone(testManager, offerData);
     }
 }

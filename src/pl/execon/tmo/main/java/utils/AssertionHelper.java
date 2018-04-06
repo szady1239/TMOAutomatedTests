@@ -1,6 +1,8 @@
 package pl.execon.tmo.main.java.utils;
 
+import org.openqa.selenium.By;
 import pl.execon.tmo.main.java.builders.*;
+import pl.execon.tmo.main.java.data.OfferData;
 import pl.execon.tmo.main.java.testclasses.TestManager;
 import pl.execon.tmo.main.java.webelements.*;
 
@@ -31,6 +33,28 @@ public class AssertionHelper {
     private static final String INTERNET_TOOLTIP_INFO_36GB = "W tym 3,6 GB w UE";
     private static final String CHOOSE_IN_NEXT_STEP_INFO = "WYBIERZ W DALSZYM KROKU";
     private static final String SUBSCRIPTION_DEMO_LENGTH = "Umowa na 6 miesięcy";
+    private static final String CART_PRICE_CSS = "#basket-summary > div > div > div.col.col-path-price_sm-3_xs-6.border-right-dashed > div.path-summary__content.align-center > div > div > div > span.price__amount";
+    private static final String SUMMARY_OFFER_PRICE_CSS = "#content > div > div > div.grid.grid-bigGutter > div.col-4_sm-6_xs-12 > div > div.row.with-accordion > div > div.clearfix > div.pull-right.price-big.price > div > div > span.price__amount";
+    private static final String SUMMARY_OFFER_PRICE_WITH_PHONE_CSS = "#content > div > div > div.grid.grid-bigGutter > div.col-4_sm-6_xs-12 > div > div:nth-child(5) > div > div.clearfix > div.pull-right.price-big.price > div > div > span.price__amount";
+    public static void checkOfferPriceAssertionOnCartPage(TestManager testManager, OfferData offerData){
+        String priceFromGrid = offerData.getOfferPrice().replace(" zł","");
+        String priceFromCart = testManager.getWebDriver().findElement(By.cssSelector(CART_PRICE_CSS)).getText().replace(".", "");
+        assertThat(priceFromGrid).containsIgnoringCase(priceFromCart);
+    }
+
+    public static void checkOfferPriceAssertionOnSummaryPageWithoutPhone(TestManager testManager, OfferData offerData) {
+        String priceFromGrid = offerData.getOfferPrice().replace(" zł","");
+        String priceFromSummary = testManager.getWebDriver().findElement(By.cssSelector(SUMMARY_OFFER_PRICE_CSS)).getText().replace(".", "");
+        assertThat(priceFromGrid).containsIgnoringCase(priceFromSummary);
+    }
+
+    public static void checkOfferPriceAssertionOnSummaryPageWithPhone(TestManager testManager, OfferData offerData) {
+        String priceFromGrid = offerData.getOfferPrice().replace(" zł","");
+        String priceFromSummary = testManager.getWebDriver().findElement(By.cssSelector(SUMMARY_OFFER_PRICE_WITH_PHONE_CSS)).getText().replace(".", "");
+        assertThat(priceFromGrid).containsIgnoringCase(priceFromSummary);
+    }
+
+
 
     public static void checkBaseAssertionsStandardWithDevice(TestManager testManager) {
         WithDeviceStandardGrid withDeviceStandardGrid = PageBuilderHelper.generatePage(testManager, new WithDeviceStandardGridBuilder(), true, false);
@@ -333,4 +357,6 @@ public class AssertionHelper {
         assertThat(withoutDeviceOnlineOnlyGrid.getSecondSectionDiscountForOnlineOrderInformation().getText()).containsIgnoringCase(DISCOUNT_FOR_ONLINE_ORDER_INFORMATION_INFO);
 
     }
+
+
 }

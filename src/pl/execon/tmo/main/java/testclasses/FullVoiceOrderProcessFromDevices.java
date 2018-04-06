@@ -26,6 +26,7 @@ public class FullVoiceOrderProcessFromDevices {
 
         PickPhoneHelper.getRandomDisplayedGetOfferButton(testManager.driver, PickPhoneHelper.getAllGetOfferButtons(testManager.driver, PickPhoneHelper.ALL_PHONES_FOR_CHOOSE_SUBSCRIPTION_CSS)).click();
         WithDeviceNoLimitGrid withDeviceNoLimitGrid = PageBuilderHelper.generatePage(testManager, new WithDeviceNoLimitGridBuilder(), true, false);
+        CloseUnnecesaryDivs.closeChatDiv(testManager);
         withDeviceNoLimitGrid.getFirstSectionPickPhoneButton().click();
 
         testManager.driver.findElement(By.cssSelector(CART_NEXT_BUTTON_CSS)).click();

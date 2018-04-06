@@ -23,6 +23,7 @@ public class CheckAllGridsStartedFromOffers {
         MainOffersGrid mainOffersGrid = PageBuilderHelper.generatePage(testManager, new MainOffersGridBuilder(), true, false);
         WithDeviceContractMenu withDeviceContractMenu = PageBuilderHelper.generatePage(testManager, new WithDeviceContractMenuBuilder(), true, false);
 
+        CloseUnnecesaryDivs.closeChatDiv(testManager);
         withDeviceContractMenu.getTMobileNoLimit().click();
         AssertionHelper.checkBaseAssertionsNoLimitWithDevice(testManager);
 

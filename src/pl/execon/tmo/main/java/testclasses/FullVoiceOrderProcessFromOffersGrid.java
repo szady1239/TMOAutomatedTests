@@ -26,6 +26,7 @@ public class FullVoiceOrderProcessFromOffersGrid {
         header.getSubscriptionSubMenu().click();
         MainOffersGrid mainOffersGrid = PageBuilderHelper.generatePage(testManager, new MainOffersGridBuilder(), true, false);
         mainOffersGrid.getWithoutDevice().click();
+        CloseUnnecesaryDivs.closeChatDiv(testManager);
         WithoutDeviceContractMenu withoutDeviceContractMenu = PageBuilderHelper.generatePage(testManager, new WithoutDeviceContractMenuBuilder(), false, false);
         withoutDeviceContractMenu.getTMobileNoLimit().click();
         WithoutDeviceNoLimitGrid withoutDeviceNoLimitGrid = PageBuilderHelper.generatePage(testManager, new WithoutDeviceNoLimitGridBuilder(), true, false);
@@ -49,6 +50,7 @@ public class FullVoiceOrderProcessFromOffersGrid {
         header.getOffersMenu().click();
         header.getSubscriptionSubMenu().click();
         MainOffersGrid mainOffersGrid = PageBuilderHelper.generatePage(testManager, new MainOffersGridBuilder(), true, false);
+        CloseUnnecesaryDivs.closeChatDiv(testManager);
         WithDeviceNoLimitGrid withDeviceNoLimitGrid = PageBuilderHelper.generatePage(testManager, new WithDeviceNoLimitGridBuilder(), true, false);
         withDeviceNoLimitGrid.getFirstSectionPickPhoneButton().click();
         PickPhoneHelper.getRandomDisplayedGetOfferButton(testManager.driver, PickPhoneHelper.getAllGetOfferButtons(testManager.driver, PickPhoneHelper.ALL_PHONES_FOR_CHOOSEN_SUBSCRIPTION_CSS)).click();

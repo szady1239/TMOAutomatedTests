@@ -8,29 +8,29 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class AssertionHelper {
 
-    private static String PAY_BILL_HEADER = "ROZMOWY NA NUMERY\nKOMÓRKOWE I STACJONARNE";
-    private static String NO_LIMIT_TEXT = "BEZ LIMITU";
-    private static String POLAND_AND_EUROPE_ROAMING_TOOLTIP_INFO = "W Polsce oraz w roamingu w UE";
-    private static String POLAND_AND_EUROPE_TOOLTIP_INFO = "W Polsce oraz UE";
-    private static String SMS_HEADER = "SMS-Y i MMS-Y";
-    private static String INTERNET_HEADER = "INTERNET";
-    private static String SUPERNET_HEADER = "SUPERNET";
-    private static String NO_DATA_LIMIT_TEXT = "BEZ LIMITU DANYCH";
-    private static String INTERNET_TOOLTIP_INFO_39GB = "W tym 3,9 GB w UE";
-    private static String SUBSCRIPTION_STANDARD_LENGTH = "Umowa na 24 miesiące";
-    private static String BONUS_HEADER = "BONUSY";
-    private static String FREE_SHIPMENT_INFO = "Darmowa\ndostawa";
-    private static String DISCOUNT_FOR_ONLINE_ORDER_INFORMATION_INFO = "Rabat za\nzakupy online";
-    private static String SUBSCRIPTION_EXTENDED_LENGTH = "Zobowiązanie na 36 miesięcy";
-    private static String SUBSCRIPTION_EXTENDED_TOOLTIP_INFO = "Umowa na abonament wynosi 24 miesiące, umowa na raty za sprzęt – 36 miesięcy";
-    private static String STANDARD_T1_SMS_COST = "20gr";
-    private static String STANDARD_T1_INTERNET_LIMIT = "2 GB";
-    private static String STANDARD_T2_INTERNET_LIMIT = "5 GB";
-    private static String INTERNET_TOOLTIP_INFO_155GB = "W tym 1,55 GB w UE";
-    private static String INTERNET_TOOLTIP_INFO_255GB = "W tym 2,55 GB w UE";
-    private static String INTERNET_TOOLTIP_INFO_36GB = "W tym 3,6 GB w UE";
-    private static String CHOOSE_IN_NEXT_STEP_INFO = "WYBIERZ W DALSZYM KROKU";
-    private static String SUBSCRIPTION_DEMO_LENGTH = "Umowa na 6 miesięcy";
+    private static final String PAY_BILL_HEADER = "ROZMOWY NA NUMERY\nKOMÓRKOWE I STACJONARNE";
+    private static final String NO_LIMIT_TEXT = "BEZ LIMITU";
+    private static final String POLAND_AND_EUROPE_ROAMING_TOOLTIP_INFO = "W Polsce oraz w roamingu w UE";
+    private static final String POLAND_AND_EUROPE_TOOLTIP_INFO = "W Polsce oraz UE";
+    private static final String SMS_HEADER = "SMS-Y i MMS-Y";
+    private static final String INTERNET_HEADER = "INTERNET";
+    private static final String SUPERNET_HEADER = "SUPERNET";
+    private static final String NO_DATA_LIMIT_TEXT = "BEZ LIMITU DANYCH";
+    private static final String INTERNET_TOOLTIP_INFO_39GB = "W tym 3,9 GB w UE";
+    private static final String SUBSCRIPTION_STANDARD_LENGTH = "Umowa na 24 miesiące";
+    private static final String BONUS_HEADER = "BONUSY";
+    private static final String FREE_SHIPMENT_INFO = "Darmowa\ndostawa";
+    private static final String DISCOUNT_FOR_ONLINE_ORDER_INFORMATION_INFO = "Rabat za\nzakupy online";
+    private static final String SUBSCRIPTION_EXTENDED_LENGTH = "Zobowiązanie na 36 miesięcy";
+    private static final String SUBSCRIPTION_EXTENDED_TOOLTIP_INFO = "Umowa na abonament wynosi 24 miesiące, umowa na raty za sprzęt – 36 miesięcy";
+    private static final String STANDARD_T1_SMS_COST = "20gr";
+    private static final String STANDARD_T1_INTERNET_LIMIT = "2 GB";
+    private static final String STANDARD_T2_INTERNET_LIMIT = "5 GB";
+    private static final String INTERNET_TOOLTIP_INFO_155GB = "W tym 1,55 GB w UE";
+    private static final String INTERNET_TOOLTIP_INFO_255GB = "W tym 2,55 GB w UE";
+    private static final String INTERNET_TOOLTIP_INFO_36GB = "W tym 3,6 GB w UE";
+    private static final String CHOOSE_IN_NEXT_STEP_INFO = "WYBIERZ W DALSZYM KROKU";
+    private static final String SUBSCRIPTION_DEMO_LENGTH = "Umowa na 6 miesięcy";
 
     public static void checkBaseAssertionsStandardWithDevice(TestManager testManager) {
         WithDeviceStandardGrid withDeviceStandardGrid = PageBuilderHelper.generatePage(testManager, new WithDeviceStandardGridBuilder(), true, false);
